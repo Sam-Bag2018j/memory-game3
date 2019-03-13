@@ -1,0 +1,111 @@
+<DOCTYPE html>
+<html lang="en">
+ <head>     
+ <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<title>Memory Game</title>
+<link rel="stylesheet" href="memoryGame.css">
+</head>
+<body>
+
+<div class="container">
+	
+<div class="row">
+<div class="headerGame">
+<div class="col-md-12">
+<h3>Memory Game</h3>
+</div>
+</div>
+ <p align ="center">
+
+    </p>
+<div>
+
+
+    <div class="row">
+<div class="wrapper">
+
+ 	<div class="col-md-6">
+<div class="item-wrapper"><span id="countdown" style=></span></div> 
+</div>
+ 
+ 	<div class="col-md-12">
+  <div class="item-wrapper"><div id="movements"></div> </div>  
+</div>
+
+<div class="col-md-12">
+		<div class="item-wrapper">
+<button id="btn" onclick="resetGame()"> reset </button> </div>
+</div>
+ 
+  </div>
+</div>
+
+  
+ <div class="row">
+
+	 
+       <div id="starsdiv" class="star">
+
+    <img class="star-item" id="star1" src="https://img.freepik.com/free-vector/start_53876-25533.jpg?size=338&ext=jpg" alt="first-star"/> 
+
+
+   <img class="star-item" id="star2" src="https://img.freepik.com/free-vector/start_53876-25533.jpg?size=338&ext=jpg" alt="second-star"/> 
+  <img class="star-item" id="star3" src="https://img.freepik.com/free-vector/start_53876-25533.jpg?size=338&ext=jpg" alt="third-star"/> 
+</div>
+ </div>
+
+<section class="cards-container">
+	
+	<div class="card" data-image="facesCard1">
+		<img class="back-face" src="https://i.pinimg.com/originals/2a/7c/38/2a7c384f1338b7d428cd42056da97500.png"   alt=""/>
+		<img class="front-face" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS2kYEgvk_q01foJoYqo2s96Er0voKq3iWWcaJyEBSVS2eDWgF" alt=""/>
+		  </div>
+
+	<div class="card" data-image="facesCard2">
+		<img class="back-face" src="http://pluspng.com/img-png/heart-png--3100.png" alt=""/>
+		<img class="front-face" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS2kYEgvk_q01foJoYqo2s96Er0voKq3iWWcaJyEBSVS2eDWgF" alt=""/>
+		 
+	</div>
+	<div class="card" data-image="facesCard2">
+    	 <img class="back-face" src="http://pluspng.com/img-png/heart-png--3100.png" alt=""/>
+		<img class="front-face" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS2kYEgvk_q01foJoYqo2s96Er0voKq3iWWcaJyEBSVS2eDWgF" alt=""/>
+	</div>
+
+    <div class="card" data-image="facesCard1">
+    	<img class="back-face" src="https://i.pinimg.com/originals/2a/7c/38/2a7c384f1338b7d428cd42056da97500.png" alt=""/>
+    	<img class="front-face" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS2kYEgvk_q01foJoYqo2s96Er0voKq3iWWcaJyEBSVS2eDWgF" alt=""/>	 
+    </div>
+     
+    <div class="card" data-image="facesCard3"> 
+    	<img class="back-face" src="https://pe-images.s3.amazonaws.com/photo-effects/cc/image-in-shape/photoshop-butterfly-custom-shape.png" alt=""/>
+    	<img class="front-face" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS2kYEgvk_q01foJoYqo2s96Er0voKq3iWWcaJyEBSVS2eDWgF" alt=""/>
+    	 
+    </div>
+    <div class="card" data-image="facesCard4">
+    	<img class="back-face" src="https://png.pngtree.com/element_origin_min_pic/16/10/19/135807001d3aa97.jpg" alt=""/>
+    	<img class="front-face" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS2kYEgvk_q01foJoYqo2s96Er0voKq3iWWcaJyEBSVS2eDWgF" alt=""/>
+        
+        
+    </div>
+    <div class="card" data-image="facesCard3">
+    	 <img class="back-face" src="https://pe-images.s3.amazonaws.com/photo-effects/cc/image-in-shape/photoshop-butterfly-custom-shape.png" alt=""/>
+    	<img class="front-face" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS2kYEgvk_q01foJoYqo2s96Er0voKq3iWWcaJyEBSVS2eDWgF" alt=""/>
+    </div>
+    
+    <div class="card" data-image="facesCard4">
+    	<img class="back-face" src="https://png.pngtree.com/element_origin_min_pic/16/10/19/135807001d3aa97.jpg" alt=""/>
+    	<img class="front-face" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS2kYEgvk_q01foJoYqo2s96Er0voKq3iWWcaJyEBSVS2eDWgF" alt=""/>
+    </div>
+    
+ </section>
+</div>
+</body>
+<script src="memoryGame.js"></script>
+
+</html>

@@ -1,0 +1,197 @@
+ *{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+ body{
+	display: flex;
+}
+
+.star{
+    display:grid;
+    grid-template-columns:  40px 40px 40px;
+  grid-template-rows:60px;
+    padding: 5px;
+    margin: 0px;
+grid-gap:5px; 
+margin:auto; 
+left:auto;
+right:auto;
+top:25%;
+left:50%;
+position:absolute;
+margin-right:-50%;
+       
+ }
+.star-item{
+
+ width: 60%;
+ height: 60%; 
+}
+
+.headerGame{
+margin:0;
+padding:20px;
+padding-bottom:20px;
+position:absolute;
+top:10%;
+left:50%;
+margin-right:-50%;
+color:red;
+font-size:2em;
+transform:translate(-50%,-50%);
+}
+ 
+
+ 
+.cards-container{
+display:flex;	
+height: 350px;
+width: 500px;
+flex-wrap: wrap;
+ background-color: #eee;
+  margin:auto;
+  perspective: 1000px;
+position:absolute;
+top:55%;
+left:50%;
+margin-right: -50%;
+transform: translate(-50%, -50%);
+background:orange; 
+  }
+
+button{
+cursor:pointer;
+background-color:orange;
+border-radius: 20px;
+width: 45px;
+height: 40px;
+ 
+ }
+
+.card{
+position: relative; 
+border: #000 1px solid;
+width: calc(25% - 10px);
+height:calc(25% -10px);
+margin: 5px;
+background-color: #ccc; 
+ transform-style: preserve-3d;
+transition: .5s;
+transform: scale(1);
+cursor:pointer;
+ }
+.card:active{
+	transform: scale(.97);
+	transition: transform .2s
+}
+.front-face{
+position: absolute;
+width: 100%;
+height: 100%;
+display: flex;
+ border-radius: 5px; 
+backface-visibility: hidden;
+}
+ 
+.back-face{
+position: absolute;
+width: 100%;
+height: 100%;
+display: flex;
+ border-radius: 5px; 
+background:lime; 
+backface-visibility: hidden;
+transform: rotateY(180deg);
+
+ }	
+
+ .card.flip{
+ 	transform: rotateY(180deg);
+ }
+ 
+.wrapper {
+  display: grid;
+  grid-template-columns:60px 180px; 
+grid-template-rows: 100px 60px;
+  align-items: left;
+grid-column-gap:100px;
+position:absolute;
+top:15%;
+ 
+ float:left;
+padding-left:40%;
+
+font-size:1em;
+ 
+
+ }
+
+ .item-wrapper{
+width:100%;
+height:100%;
+ 
+font-weight:bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .cards-container {
+    display:flex;	
+    height: 200px;
+    width: 250px;
+    flex-wrap: wrap;
+     background-color: #eee;
+      margin:auto;
+      perspective: 1000px;
+    position:absolute;
+    top:55%;
+    left:50%;
+    margin-right:0;
+    transform: translate(-50%, -50%);
+    background:rgb(255, 145, 0); 
+  }
+  .star{
+    display:grid;
+    grid-template-columns: 20px 20px 20px 20px;
+  grid-template-rows:40px;
+    padding: 5px;
+    margin: 0px;
+grid-gap:5px; 
+margin:auto; 
+left:auto;
+right:auto;
+top:30%;
+left:40%;
+position:absolute;
+margin-right:-50%;
+       
+ }
+ .wrapper {
+  display: grid;
+  grid-template-columns:60px 100px ;
+grid-template-rows: auto;
+  align-items: left;
+grid-row-gap: 10px;
+grid-column-gap: 5px;
+position:absolute;
+top:15%;
+ float:left;
+padding-left:40%;
+font-size: 10px;
+ }
+ .headerGame{
+   font-size:20px ;
+ }
+ button{
+  cursor:pointer;
+  background-color:orange;
+  border-radius: 18px;
+  width: 35px;
+  height: 30px;
+   }
+  
+
+} 
+
+
